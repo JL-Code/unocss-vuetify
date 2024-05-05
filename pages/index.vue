@@ -1,6 +1,21 @@
-<script setup></script>
+<script setup>
+import { useModal } from "vue-final-modal";
+import { ModalConfirmPlainCss } from "#components";
 
-<
+const { open, close } = useModal({
+  component: ModalConfirmPlainCss,
+  attrs: {
+    title: "Hello World!",
+    onConfirm() {
+      close();
+    },
+  },
+  slots: {
+    default: "<p>The content of the modal</p>",
+  },
+});
+</script>
+
 <template>
   <div>
     <p>index</p>
@@ -13,5 +28,12 @@
 
     <p>链接</p>
     <NuxtLink to="/skeleton">Skeleton Demo</NuxtLink>
+
+    <p>vue final modal</p>
+    <v-btn @click="open">open Modal</v-btn>
+
+    
+    <p>vue final modal</p>
+    <v-btn @click="open">open Modal</v-btn>
   </div>
 </template>

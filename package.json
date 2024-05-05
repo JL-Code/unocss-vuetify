@@ -12,6 +12,7 @@
   "dependencies": {
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
+    "vue-final-modal": "^4.5.4",
     "vue-router": "^4.3.0",
     "vuetify-nuxt-module": "^0.13.5"
   },

@@ -14,9 +14,15 @@ importers:
       vue:
         specifier: ^3.4.21
         version: 3.4.26
+      vue-final-modal:
+        specifier: ^4.5.4
+        version: 4.5.4(@vueuse/core@10.9.0(vue@3.4.26))(@vueuse/integrations@10.9.0(focus-trap@7.5.4)(vue@3.4.26))(focus-trap@7.5.4)(vue@3.4.26)
       vue-router:
         specifier: ^4.3.0
         version: 4.3.2(vue@3.4.26)
+      vuetify-nuxt-module:
+        specifier: ^0.13.5
+        version: 0.13.5(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(terser@5.31.0))(vue@3.4.26)
     devDependencies:
       '@unocss/nuxt':
         specifier: ^0.59.4
@@ -1037,6 +1043,12 @@ packages:
 
   '@vue/shared@3.4.26':
     resolution: {integrity: sha512-Fg4zwR0GNnjzodMt3KRy2AWGMKQXByl56+4HjN87soxLNU9P5xcJkstAlIeEF3cU6UYOzmJl1tV0dVPGIljCnQ==}
+
+  '@vuetify/loader-shared@2.0.3':
+    resolution: {integrity: sha512-Ss3GC7eJYkp2SF6xVzsT7FAruEmdihmn4OCk2+UocREerlXKWgOKKzTN5PN3ZVN5q05jHHrsNhTuWbhN61Bpdg==}
+    peerDependencies:
+      vue: ^3.0.0
+      vuetify: ^3.0.0
 
   '@vueuse/components@10.9.0':
     resolution: {integrity: sha512-BHQpA0yIi3y7zKa1gYD0FUzLLkcRTqVhP8smnvsCK6GFpd94Nziq1XVPD7YpFeho0k5BzbBiNZF7V/DpkJ967A==}
@@ -3404,6 +3416,10 @@ packages:
   unwasm@0.3.9:
     resolution: {integrity: sha512-LDxTx/2DkFURUd+BU1vUsF/moj0JsoTvl+2tcg2AUOiEzVturhGGx17/IMgGvKUYdZwr33EJHtChCJuhu9Ouvg==}
 
+  upath@2.0.1:
+    resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==}
+    engines: {node: '>=4'}
+
   update-browserslist-db@1.0.14:
     resolution: {integrity: sha512-JixKH8GR2pWYshIPUg/NujK3JO7JiqEEUiNArE86NQyrgUuZeTlZQN3xuS/yiV5Kb48ev9K6RqNkaJjXsdg7Jw==}
     hasBin: true
@@ -3485,6 +3501,14 @@ packages:
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
 
+  vite-plugin-vuetify@2.0.3:
+    resolution: {integrity: sha512-HbYajgGgb/noaVKNRhnnXIiQZrNXfNIeanUGAwXgOxL6h/KULS40Uf51Kyz8hNmdegF+DwjgXXI/8J1PNS83xw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: '>=5'
+      vue: ^3.0.0
+      vuetify: ^3.0.0
+
   vite@5.2.11:
     resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3554,6 +3578,14 @@ packages:
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
 
+  vue-final-modal@4.5.4:
+    resolution: {integrity: sha512-wYunoN89Ago2d6p/hevyo4KSfar1HxScllS6FaHujCGyx69fsb40YPGzN17bk9K68daYAgrJ1inxv+fvhIGv5A==}
+    peerDependencies:
+      '@vueuse/core': '>=10.0.0'
+      '@vueuse/integrations': '>=10.0.0'
+      focus-trap: '>=7.2.0'
+      vue: '>=3.2.0'
+
   vue-observe-visibility@2.0.0-alpha.1:
     resolution: {integrity: sha512-flFbp/gs9pZniXR6fans8smv1kDScJ8RS7rEpMjhVabiKeq7Qz3D9+eGsypncjfIyyU84saU88XZ0zjbD6Gq/g==}
     peerDependencies:
@@ -3580,6 +3612,28 @@ packages:
       typescript: '*'
     peerDependenciesMeta:
       typescript:
+        optional: true
+
+  vuetify-nuxt-module@0.13.5:
+    resolution: {integrity: sha512-sqlDB+e/cHoKSjLQZ5Vl4pV+SpM47TcTfna9oajb8q+RFogPdN1nUlYDyQF5LPNaLKvcInK7CPTCRjv6+2WRxA==}
+
+  vuetify@3.6.3:
+    resolution: {integrity: sha512-OBYYJYnNeUYA7kwrv8Rag1EBFbGWAQxJpp0s98U2KQ6SPU7MzzcrvNn7t69vcDbj7mR7Dcf9/jvFapfranXZvA==}
+    engines: {node: ^12.20 || >=14.13}
+    peerDependencies:
+      typescript: '>=4.7'
+      vite-plugin-vuetify: '>=1.0.0'
+      vue: ^3.3.0
+      vue-i18n: ^9.0.0
+      webpack-plugin-vuetify: '>=2.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vite-plugin-vuetify:
+        optional: true
+      vue-i18n:
+        optional: true
+      webpack-plugin-vuetify:
         optional: true
 
   watchpack@2.4.1:
@@ -5061,6 +5115,12 @@ snapshots:
       vue: 3.4.26
 
   '@vue/shared@3.4.26': {}
+
+  '@vuetify/loader-shared@2.0.3(vue@3.4.26)(vuetify@3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26))':
+    dependencies:
+      upath: 2.0.1
+      vue: 3.4.26
+      vuetify: 3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26)
 
   '@vueuse/components@10.9.0(vue@3.4.26)':
     dependencies:
@@ -7695,6 +7755,8 @@ snapshots:
       pkg-types: 1.1.0
       unplugin: 1.10.1
 
+  upath@2.0.1: {}
+
   update-browserslist-db@1.0.14(browserslist@4.23.0):
     dependencies:
       browserslist: 4.23.0
@@ -7793,6 +7855,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  vite-plugin-vuetify@2.0.3(vite@5.2.11(@types/node@20.12.8)(terser@5.31.0))(vue@3.4.26)(vuetify@3.6.3):
+    dependencies:
+      '@vuetify/loader-shared': 2.0.3(vue@3.4.26)(vuetify@3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26))
+      debug: 4.3.4
+      upath: 2.0.1
+      vite: 5.2.11(@types/node@20.12.8)(terser@5.31.0)
+      vue: 3.4.26
+      vuetify: 3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26)
+    transitivePeerDependencies:
+      - supports-color
+
   vite@5.2.11(@types/node@20.12.8)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
@@ -7836,6 +7909,13 @@ snapshots:
 
   vue-devtools-stub@0.1.0: {}
 
+  vue-final-modal@4.5.4(@vueuse/core@10.9.0(vue@3.4.26))(@vueuse/integrations@10.9.0(focus-trap@7.5.4)(vue@3.4.26))(focus-trap@7.5.4)(vue@3.4.26):
+    dependencies:
+      '@vueuse/core': 10.9.0(vue@3.4.26)
+      '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.26)
+      focus-trap: 7.5.4
+      vue: 3.4.26
+
   vue-observe-visibility@2.0.0-alpha.1(vue@3.4.26):
     dependencies:
       vue: 3.4.26
@@ -7863,6 +7943,33 @@ snapshots:
       '@vue/runtime-dom': 3.4.26
       '@vue/server-renderer': 3.4.26(vue@3.4.26)
       '@vue/shared': 3.4.26
+
+  vuetify-nuxt-module@0.13.5(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(terser@5.31.0))(vue@3.4.26):
+    dependencies:
+      '@nuxt/kit': 3.11.2(rollup@4.17.2)
+      defu: 6.1.4
+      destr: 2.0.3
+      local-pkg: 0.5.0
+      pathe: 1.1.2
+      perfect-debounce: 1.0.0
+      ufo: 1.5.3
+      unconfig: 0.3.13
+      vite-plugin-vuetify: 2.0.3(vite@5.2.11(@types/node@20.12.8)(terser@5.31.0))(vue@3.4.26)(vuetify@3.6.3)
+      vuetify: 3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+      - vue
+      - vue-i18n
+      - webpack-plugin-vuetify
+
+  vuetify@3.6.3(vite-plugin-vuetify@2.0.3)(vue@3.4.26):
+    dependencies:
+      vue: 3.4.26
+    optionalDependencies:
+      vite-plugin-vuetify: 2.0.3(vite@5.2.11(@types/node@20.12.8)(terser@5.31.0))(vue@3.4.26)(vuetify@3.6.3)
 
   watchpack@2.4.1:
     dependencies:
