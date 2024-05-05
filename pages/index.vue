@@ -1,6 +1,6 @@
 <script setup>
 import { useModal } from "vue-final-modal";
-import { ModalConfirmPlainCss } from "#components";
+import { ModalConfirmPlainCss, ModalCard } from "#components";
 
 const { open, close } = useModal({
   component: ModalConfirmPlainCss,
@@ -11,13 +11,24 @@ const { open, close } = useModal({
     },
   },
   slots: {
-    default: "<p>The content of the modal</p>",
+    default:
+      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus!</p>",
+  },
+});
+
+const $modal = useModal({
+  component: ModalCard,
+  attrs: {
+    title: "Hello World!",
+    onConfirm() {
+      $modal.close();
+    },
   },
 });
 </script>
 
 <template>
-  <div>
+  <div class="py-8 px-4">
     <p>index</p>
     <v-btn>按钮</v-btn>
 
@@ -32,8 +43,7 @@ const { open, close } = useModal({
     <p>vue final modal</p>
     <v-btn @click="open">open Modal</v-btn>
 
-    
     <p>vue final modal</p>
-    <v-btn @click="open">open Modal</v-btn>
+    <v-btn @click="$modal.open()">open Modal Card</v-btn>
   </div>
 </template>
